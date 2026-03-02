@@ -1,4 +1,4 @@
-<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs">
+<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs" :container-class="$containerClass">
 
 
 

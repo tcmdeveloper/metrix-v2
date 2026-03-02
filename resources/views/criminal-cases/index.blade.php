@@ -1,9 +1,9 @@
-<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs">
+<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs" :container-class="$containerClass">
 
     
     {{-- GRID --}}
 
-    <div class="grid-1-cols">
+    <div class="grid grid-cols-3 gap-4">
 
 
         @foreach($criminal_cases as $criminal_case)

@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class CriminalCaseController extends Controller
 {
     
-    protected $site, $model, $modelData, $directory, $label, $plural, $toast, $pageHeadings;
+    protected $site, $model, $modelData, $directory, $label, $plural, $toast, $pageHeadings, $containerClass;
 
 
     public function __construct(){
@@ -24,6 +24,7 @@ class CriminalCaseController extends Controller
         $this->plural = $this->modelData->plural;
         $this->pageHeadings = $this->site->getPageHeadings($this->modelData);
         $this->toast = $this->site->getToastMessages($this->modelData);
+        $this->containerClass = 'container-test';
 
     }
 
@@ -52,6 +53,7 @@ class CriminalCaseController extends Controller
                     'link' => '/' . $this->directory
                 ]
             ],
+            'containerClass' => $this->containerClass,
             'criminal_cases' => $this->site->criminalCases(true)
         ]);
 
@@ -88,6 +90,7 @@ class CriminalCaseController extends Controller
                 ]
 
             ],
+            'containerClass' => $this->containerClass,
             'criminal_case' => $criminal_case
         ]);
     }
@@ -129,6 +132,7 @@ class CriminalCaseController extends Controller
                 ]
 
             ],
+            'containerClass' => $this->containerClass,
             'criminal_case' => $criminal_case
         ]);
     }
@@ -170,6 +174,7 @@ class CriminalCaseController extends Controller
                 ]
 
             ],
+            'containerClass' => $this->containerClass,
             'criminal_case' => $criminal_case,
             'document' => $document
         ]);

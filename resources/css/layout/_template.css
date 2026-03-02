@@ -47,7 +47,16 @@ main{
         mx-auto
         px-4
         md:px-0
-        w-1/2
+        w-full
+    ;
+
+}
+
+
+.container-test{
+
+    @apply 
+        w-3/5
     ;
 
 }

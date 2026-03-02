@@ -1,7 +1,7 @@
 <div {{$attributes->merge(['class' => 'content-list-item'])}} class="text-2xl">
 
 
-    <a
+    {{-- <a
         href="{{$resource->link()}}"
         aria-label="{{$resource->linkLabel()}}"
         class="text-3xl font-black hover-dip"
@@ -9,13 +9,13 @@
     
             {{$resource->title}}
     
-    </a>
+    </a> --}}
 
 
 
     {{-- IMAGE THUMBNAIL --}}
 
-    {{-- <div class="image">
+    <div class="image">
 
         <a
             href="{{$resource->link()}}"
@@ -30,19 +30,19 @@
         </a>
 
     
-    </div> --}}
+    </div>
 
 
 
 
     {{--TEXT --}}
 
-    {{-- <div class="text"> --}}
+    <div class="text">
 
 
         {{-- CATEGORY PIP --}}
 
-        {{-- @unless(isset($hidePip) && $hidePip === true)
+        @unless(isset($hidePip) && $hidePip === true)
             @if(isset($listSize) && $listSize === 'sm')
 
                 <x-elements.category-pip :resource="$resource->criminal_case" class="category-pip-sm" />
@@ -52,30 +52,30 @@
                 <x-elements.category-pip :resource="$resource->criminal_case" />
 
             @endif
-        @endunless --}}
+        @endunless
 
 
         {{-- TITLE --}}
 
-        {{-- <a
+        <a
             href="{{$resource->link()}}"
             aria-label="{{$resource->linkLabel()}}"
             class="title"
         >
             {{$resource->title}}
-        </a> --}}
+        </a>
 
 
-        {{-- @unless(isset($listSize) && $listSize === 'sm') --}}
+        @unless(isset($listSize) && $listSize === 'sm')
 
             {{-- RESOURCE PUBLISHING INFORMATION --}}
 
-            {{-- <x-elements.resource-publishing-information :resource="$resource" class="text-xl" />
+            {{-- {{-- <x-elements.resource-publishing-information :resource="$resource" class="text-xl" /> --}}
 
         @endunless
 
 
-    </div> --}}
+    </div>
 
 
 </div>

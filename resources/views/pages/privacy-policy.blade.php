@@ -1,4 +1,4 @@
-<x-layout.template :pageHeadings="$pageHeadings">
+<x-layout.template :pageHeadings="$pageHeadings" :container-class="$containerClass">
 <br><br>
     <div class="terms-text">
         <div class="section">

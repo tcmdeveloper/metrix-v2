@@ -1,4 +1,4 @@
-<x-layout.template :pageHeadings="$pageHeadings">
+<x-layout.template :pageHeadings="$pageHeadings" :container-class="$containerClass">
     <p class="text-center">
         Please send us emails with a clear subject line. This make it lot easier for us to find stuff later. Thank you all so much for all the great suggestions, pictures, documents, feedback and well-wishes!
     </p>

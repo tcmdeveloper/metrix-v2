@@ -13,11 +13,12 @@ use Illuminate\Support\Facades\DB;
 class SiteController extends Controller
 {
 
-    protected $site;
+    protected $site, $containerClass;
     
     
     public function __construct(Site $site){
         $this->site = $site;
+        $this->containerClass = 'container-test';
     }
 
 
@@ -29,9 +30,10 @@ class SiteController extends Controller
         
         return view('pages.home', [
             'pageHeadings' => [
-                'True crime cases',
-                'Just another true crime resource that we hope you enjoy.'
+                'True Crime Metrix',
+                'We collect information about the cases we cover.\nWe put that information here.'
             ],
+            'containerClass' => $this->containerClass,
             'criminal_cases' => $this->site->criminalCases(false, 4, true),
             'criminals' => $this->site->criminals(false, 10),
             'articles' => $this->site->articles(false, 10),

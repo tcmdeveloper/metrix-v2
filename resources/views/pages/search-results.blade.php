@@ -1,4 +1,4 @@
-<x-layout.template :pageHeadings="$pageHeadings" container-class="container-sm">
+<x-layout.template :pageHeadings="$pageHeadings" :container-class="$containerClass">
     
     @if(count($criminal_cases) > 0)
 

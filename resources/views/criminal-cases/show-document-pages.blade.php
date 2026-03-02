@@ -1,4 +1,4 @@
-<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs">
+<x-layout.template :page-headings="$pageHeadings" :breadcrumbs="$breadcrumbs" :container-class="$containerClass">
 
     @if($document->images->isEmpty())
         <x-elements.alert alert="This document is not available right now." type="success" />

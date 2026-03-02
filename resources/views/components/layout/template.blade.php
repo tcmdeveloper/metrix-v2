@@ -45,7 +45,11 @@
 
     <body>
 
+        {{$containerClass}}
+
         <x-layout.navigation />
+
+
 
         <main>
             <x-layout.container class="{{isset($containerClass) ? $containerClass : null}}">
